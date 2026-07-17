@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "Fira Code", ui-monospace, monospace;
+}
+
+/* Custom background animations and glows */
+@keyframes spinSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 30s linear infinite;
+}
+
+/* Custom neon text shadow helper */
+.text-shadow-purple {
+  text-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
+}
+
+/* Elegant scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #040108;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f1245;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a855f7;
+}
+
+/* Blinking cursor style */
+.cursor-blink::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { color: transparent }
+  50% { color: #a855f7 }
+}
